@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade dos clientes da empresa Hambiental</h1>
+    <p> Se o cliente mora no <input type="text" name="pais" id="Brasil"> 
+        tem a nacionalidade brasileira.
+
+        <input type="button" value="verificar" onclick="verificar()">
+
+    </p>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+    var pais = window.document.getElementById('brasileira')
+
+    function verificar() {
+    
+    var pais = document.getElementById('Brasil').value;
+    var res = document.getElementById('res');
+    res.innerHTML = `Sua nacionalidade é <strong>${pais}</strong> `;
+
+    if (pais !== 'Brasil') {
+    res.innerHTML += '.Sua nacionalidade é estrangeira'
+    }
+
+    }
+
+    </script>
+
+
+    
+</body>
+</html>
